@@ -1,0 +1,80 @@
+body{
+    background: rgb(18,18,18);
+    background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(120,120,124,1) 30%, rgba(183,183,191,1) 50%, rgba(126,126,128,1) 70%, rgba(12,13,13,1) 100%);
+}
+.heading{
+    border: 0px;
+    text-align: center;
+}
+div{
+    border: 1px solid black;
+}
+.calculator{
+    padding: 10px;
+    max-height: 55%;
+    max-width: 22%;
+    background-color: rgb(48, 46, 46);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0px 5px 20px 10px #636363;
+}
+.display{
+    padding: 5px;
+    font-size: 4rem;
+    text-align: end;
+    height: 14%;
+    border: 10px solid black;
+    background-color: gainsboro;
+}
+.keys{
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 80%;
+}
+.rows{
+    display: flex;
+    gap: 5px;
+    height: 100%;
+}
+.rows>button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border-radius: 5px;
+}
+.lastRow{
+    display: grid;
+    grid: auto/49% 24% 24%;
+}
+.topKeys{
+    background-color: gray;
+}
+.rightMostKeys{
+    background-color: #1E90FF;
+}
+@media (max-width: 1000px) {
+    .calculator{
+        max-width: 50%;
+        max-height: 45%;
+    }
+}
+@media (max-width:600px) {
+    .calculator{
+        max-width: 60%;
+        max-height: 60%;
+    }
+    .display{
+        height: 13%;
+        font-size: 3rem;
+    }
+    .lastRow{
+        grid: auto/49% 24% 24%;
+    }
+}
