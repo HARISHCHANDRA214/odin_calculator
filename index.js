@@ -17,6 +17,7 @@ function clearDisplay(){
     isDecimalNumber=true;
     document.getElementById("display").innerHTML=0;
 }
+
 function numberPressed(e){
     if(isFirstNumber){
         firstNumber+=e.value;
@@ -63,12 +64,6 @@ function operation(operator){
             secondNumber="";
             document.getElementById("display").innerHTML=firstNumber;
             break;
-        case "%":
-            firstNumber=parseFloat(firstNumber)%parseFloat(secondNumber);
-            secondNumber="";
-            document.getElementById("display").innerHTML=firstNumber;
-            break;
-
     }
 }
 function operatorPressed(e){
@@ -87,6 +82,9 @@ function operatorPressed(e){
             document.getElementById("display").innerHTML=secondNumber;
         }
         return;
+    }else if(e.value=="%"){
+        firstNumber=parseFloat(firstNumber)/100;
+        document.getElementById("display").innerHTML=firstNumber;
     }else if(lastKeyPressed=="operator"){
         secondNumber=firstNumber;
     }else if(isFirstOperand){
